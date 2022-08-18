@@ -25,7 +25,7 @@ marp: true
 
  
 
-![Figure 9.1: The light flasher split into a Master FSM and a Timer FSM.](./image/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-06-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_3.46.12.png)
+![](./image/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-06-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_3.46.12.png)
 
 ---
 
@@ -56,7 +56,11 @@ val timerSelect = WireDefault(true.B) // select 6 or 4 cycles
 val timerDone = Wire(Bool())
 
 timerLoad := timerDone
+```
 
+---
+
+```scala
 // Master FSM
 switch(stateReg) { 
   is(off) {
@@ -87,6 +91,8 @@ switch(stateReg) {
   } 
 }
 ```
+
+
 
 ---
 
